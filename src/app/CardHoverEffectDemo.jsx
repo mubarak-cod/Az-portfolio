@@ -4,49 +4,49 @@ export function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
       <h1 className="text-3xl sm:text-4xl md:text-5xl mt-22 font-bold text-center text-neutral-800 dark:text-white tracking-tight mb-6">
-         My Creative Arsenal
-
+        My Creative Arsenal
       </h1>
 
       <HoverEffect items={projects} />
     </div>
   );
 }
+
 export const projects = [
   {
-    title: "Stripe",
+    title: "Green Bite – Food Delivery App UI/UX",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Type: UI/UX Design · Tools: Figma · Year: 2025 — Designed a clean, fast mobile app with smooth navigation and bold CTAs to simplify food ordering.",
+    // link: "#",
   },
   {
-    title: "Netflix",
+    title: "Bloom & Brew – Coffee Brand Identity",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Type: Branding, Packaging · Tools: Illustrator, Photoshop · Year: 2025 — Crafted a premium identity that emotionally connects with coffee lovers and boosts shelf appeal.",
+    link: "#",
   },
   {
-    title: "Google",
+    title: "Styled by Zee – Fashion Brand Visual Identity",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Type: Logo, Branding · Tools: Illustrator · Year: 2024 — Created a luxurious, feminine brand image that builds trust and stands out.",
+    // link: "#",
   },
   {
-    title: "Meta",
+    title: "MaxReach – Marketing Flyers & Ads",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "Type: Graphic Design · Tools: Photoshop · Year: 2024–2025 — Redesigned flyers with bold visuals and CTAs, increasing engagement and conversions.",
+    // link: "#",
   },
   {
-    title: "Amazon",
+    title: "Old School RnB Night – Event Visual",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+      "Type: Event Branding / Poster Design · Tools: Photoshop · Year: 2025 — Brought a retro-themed vision to life and visually sold out the event.",
+    // link: "#",
   },
   {
-    title: "Microsoft",
+    title: "Klay Kidswear – Kids Fashion Brand Identity",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Type: Logo, Social Templates · Tools: Illustrator, Photoshop · Year: 2024 — Designed a playful yet clean identity that resonates with kids and parents.",
+    // link: "#",
   },
 ];

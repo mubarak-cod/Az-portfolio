@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import Image from "next/image";
+// import Azeez from "@/public/azeez.jpg";
 
 export default function AboutMe() {
   return (
@@ -11,12 +13,18 @@ export default function AboutMe() {
             Who’s Behind These Designs?
           </h2>
           <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
-            I’m <span className="font-semibold text-[#0000c9] dark:text-white">Azeez Folaranmi</span> — a multi-passionate Nigerian UI/UX, Brand & Graphic Designer
-            blending logic and emotion to solve real-world problems with sleek visuals.
-            With 3+ years of experience, I help brands become unforgettable.
+            I’m{" "}
+            <span className="font-semibold text-[#0000c9] dark:text-white">
+              Azeez Folaranmi
+            </span>{" "}
+            — a multi-passionate Nigerian UI/UX, Brand & Graphic Designer
+            blending logic and emotion to solve real-world problems with sleek
+            visuals. With 3+ years of experience, I help brands become
+            unforgettable.
             <br />
             <br />
-            From mobile apps to full visual identities, I create designs that hit different and leave a mark.
+            From mobile apps to full visual identities, I create designs that
+            hit different and leave a mark.
           </p>
 
           {/* Fun Facts - Designer Cards */}
@@ -56,7 +64,9 @@ export default function AboutMe() {
                 <h3 className="text-md md:text-lg font-semibold text-gray-800 dark:text-white">
                   {fact.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{fact.desc}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {fact.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -67,10 +77,11 @@ export default function AboutMe() {
           {/* Animated border */}
           <div className="absolute inset-0 rounded-full border-4 border-[#0000c9] animate-spin-slow" />
           {/* Static image inside */}
-          <img
-            src="https://i.ibb.co/Wp6kBR5/elon-musk.jpg"
-            alt="Profile"
-            className="w-full h-full object-cover rounded-full z-10 relative"
+          <Image
+            src="/images/azeez.jpg"
+            alt="Azeez"
+            fill
+            className="object-cover rounded-full"
           />
         </div>
       </div>

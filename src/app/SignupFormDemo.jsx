@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import emailjs from "@emailjs/browser";
 import {
   IconBrandGithub,
   IconBrandGoogle,
@@ -10,6 +11,27 @@ import {
 } from "@tabler/icons-react";
 
 export function SignupFormDemo() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_g4atyj6",
+        "template_e0tznir",
+        form.current,
+        "BVMhPkH1WmTCQ-O5a"
+      )
+      .then(() => {
+        alert("Email successfully sent");
+        form.current.reset();
+      })
+      .catch((error) => {
+        alert("Failed to send message, please try again.");
+        console.error("EmailJS Error:", error);
+      });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted");
@@ -44,23 +66,39 @@ export function SignupFormDemo() {
         </p>
       </div>
 
-      <form className="space-y-5" onSubmit={handleSubmit}>
+      <form ref={form} className="space-y-5" onSubmit={sendEmail}>
         <div className="flex flex-col md:flex-row gap-4">
           <LabelInputContainer>
-            <Input id="firstname" placeholder="First Name" type="text" />
+            <Input
+              id="firstname"
+              name="firstname"
+              placeholder="First Name"
+              type="text"
+            />
           </LabelInputContainer>
-          <LabelInputContainer>
-            <Input id="lastname" placeholder="Last-Name" type="text" />
-          </LabelInputContainer>
+          {/* <LabelInputContainer>
+            <Input
+              id="lastname"
+              name="lastname"
+              placeholder="Last Name"
+              type="text"
+            />
+          </LabelInputContainer> */}
         </div>
 
         <LabelInputContainer>
-          <Input id="email" placeholder="Your Email" type="email" />
+          <Input
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            type="email"
+          />
         </LabelInputContainer>
 
         <LabelInputContainer>
           <textarea
             id="message"
+            name="message"
             placeholder="Your Message"
             className="w-full rounded-md border border-neutral-200 bg-white px-4 py-2 text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-black dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:placeholder:text-neutral-600 dark:focus:ring-white"
             rows={4}

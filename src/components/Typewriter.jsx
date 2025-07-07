@@ -39,7 +39,7 @@ export const Typewriter = () => {
   }, [charIndex, isDeleting, wordIndex]);
 
   return (
-    <h1 className="text-2xl md:text-4xl font-bold text-center text-white">
+    <h1 className="text-2xl md:text-5xl font-bold text-center text-white">
       <span>{text}</span>
       <span className="blinking-cursor">|</span>
     </h1>

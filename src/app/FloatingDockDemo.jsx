@@ -10,6 +10,7 @@ import {
   IconBrandFacebook,
   IconBrandLinkedin,
   IconBrandWhatsapp,
+  IconBrandInstagram,
 } from "@tabler/icons-react";
 
 export function FloatingDockDemo() {
@@ -19,7 +20,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandFacebook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.facebook.com/profile.php?id=61563993220558",
     },
 
     {
@@ -27,7 +28,7 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#", // You can update this with your actual LinkedIn profile link
+      href: "https://www.linkedin.com/in/azeezcreative?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
 
     {
@@ -35,30 +36,30 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandWhatsapp className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#", // Replace with your WhatsApp chat link
+      href: "https://wa.me/2348142545699",
     },
     {
       title: "Twitter",
       icon: (
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://x.com/artistic_axis?t=pkuwkjOXAdZwHEuTzkCm8A&s=09",
     },
     {
-      title: "GitHub",
+      title: "Instagram",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.instagram.com/artistic_axis_gd?igsh=MWQ5czhnZXF3OTM0Mg==",
     },
   ];
   return (
-    <div className="flex items-center justify-center h-[35rem] w-full">
-      <FloatingDock
-        // only for demo, remove for production
-        mobileClassName="translate-y-20"
-        items={links}
-      />
+    <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16">
+      <FloatingDock mobileClassName="translate-y-20" items={links} />
+
+      <span className="mt-8 text-sm text-center text-neutral-500 dark:text-neutral-400">
+        © 2025 Artistic Axis. All rights reserved.
+      </span>
     </div>
   );
 }

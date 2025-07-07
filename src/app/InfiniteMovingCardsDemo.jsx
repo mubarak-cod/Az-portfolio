@@ -25,31 +25,31 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "Azeez completely transformed the way our brand looked. From the logo to the entire identity, everything feels premium now. He really gets it",
+    name: "Seyi Adewale, Founder @ Bloom & Brew",
+    // title: "A Tale of Two Cities",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+      "What I love most about working with Azeez is that he doesn’t just design, he listens, understands your vision, and delivers even more than you imagined.",
+    name: "Mary Njoku, Creative Lead @ Klay Kidswear",
+    // title: "Hamlet",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    quote: "I had this vision for an old-school party night, but it was all in my head. Azeez brought it to life perfectly, vibrant, retro, and exactly the vibe I wanted. Even the guests were asking who designed it!",
+    name: "Zita K., Event Planner (united kingdom)",
+    // title: "A Dream Within a Dream",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "We hired Azeez to revamp our platform’s UX for international users. His approach was smart, clean, and culturally aware, it improved engagement by over 40%. He’s the type of designer you want on every product.",
+    name: "Carlos Mendes, Product Manager @ Streamly  (Spain)",
+    // title: "Pride and Prejudice",
+  },
+  {
+    quote:
+      "From our first meeting, Azeez understood the soul of our skincare brand. He gave us a look that feels premium and natural, our packaging now competes on shelves globally..",
+    name: "Isabelle Moreau, Founder @ Elua Organics 🇫🇷 (France)",
+    // title: "Moby-Dick",
   },
 ];
