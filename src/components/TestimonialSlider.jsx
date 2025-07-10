@@ -31,25 +31,36 @@ const testimonials = [
 
 export default function TestimonialSlider() {
   const scrollRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile(); // Run once
+    window.addEventListener("resize", checkIsMobile); // Update on resize
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // ❌ Stop auto-scroll on mobile
+
     const el = scrollRef.current;
     if (!el) return;
 
     const scroll = () => {
-      if (!isHovered) {
-        el.scrollLeft += 1;
+      el.scrollLeft += 1;
 
-        if (el.scrollLeft + el.clientWidth >= el.scrollWidth) {
-          el.scrollTo({ left: 0, behavior: "smooth" });
-        }
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
       }
     };
 
     const interval = setInterval(scroll, 20);
     return () => clearInterval(interval);
-  }, [isHovered]);
+  }, [isMobile]);
 
   return (
     <section className="w-full py-16 px-4 bg-[#f9f9ff] dark:bg-[#0c0c1d]">
@@ -63,8 +74,6 @@ export default function TestimonialSlider() {
       <div
         className="overflow-x-auto no-scrollbar scroll-smooth"
         ref={scrollRef}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         <div className="flex gap-6 px-2 md:px-8 w-max">
           {testimonials.map((t, idx) => (
