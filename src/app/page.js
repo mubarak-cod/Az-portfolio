@@ -1,7 +1,10 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Player } from "@lottiefiles/react-lottie-player";
+
 import { SparklesPreview } from "./SparklesPreview";
 import Navbar from "@/components/Navbar";
-// import { BentoGridThirdDemo } from "./BentoGridThirdDemo";
 import { InfiniteMovingCardsDemo } from "./InfiniteMovingCardsDemo";
 import { CardHoverEffectDemo } from "./CardHoverEffectDemo";
 import { SignupFormDemo } from "./SignupFormDemo";
@@ -10,9 +13,29 @@ import AboutMe from "@/components/AboutMe";
 import Services from "@/components/Services";
 import GreenBiteCaseStudy from "@/components/GreenBiteCaseStudy";
 import BorderMagicButton from "@/components/BorderMagicButton";
-import TestimonialSlider from "@/components/TestimonialSlider"
+import TestimonialSlider from "@/components/TestimonialSlider";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2500); // 2.5s delay
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen w-full flex items-center justify-center bg-[#0000C9]">
+        <Player
+          autoplay
+          loop
+          src="/lottie/paper-plane.json"
+          style={{ height: "150px", width: "150px" }}
+        />
+      </div>
+    );
+  }
+
   return (
     <>
       <Navbar />
@@ -41,7 +64,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="scroll-mt-28">
-         <BorderMagicButton />
+        <BorderMagicButton />
       </section>
 
       <FloatingDockDemo />

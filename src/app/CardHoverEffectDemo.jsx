@@ -23,7 +23,7 @@ export const projects = [
     title: "Bloom & Brew – Coffee Brand Identity",
     description:
       "Type: Branding, Packaging · Tools: Illustrator, Photoshop · Year: 2025 — Crafted a premium identity that emotionally connects with coffee lovers and boosts shelf appeal.",
-    link: "#",
+    // link: "#",
   },
   {
     title: "Styled by Zee – Fashion Brand Visual Identity",

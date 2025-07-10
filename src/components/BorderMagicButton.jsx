@@ -4,7 +4,7 @@ import { Send } from "lucide-react";
 
 const BorderMagicButton = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center pt-2 pb-30 px-4 text-center">
+    <div className="w-full flex flex-col items-center justify-center pt-2 pb-5 px-4 text-center">
       {/* Header Text */}
       <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-2">
         What’s Next?

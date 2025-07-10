@@ -8,7 +8,7 @@ import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import { Typewriter } from "@/components/Typewriter";
 
 const rawText = [
-  { text: "I’m Azeez — a " },
+  { text: "I’m Azeez, a " },
   { text: "UI/UX, Brand & Graphic Designer", className: "text-white font-semibold" },
   { text: " turning ideas into mind-blowing visual realities." },
 ];
