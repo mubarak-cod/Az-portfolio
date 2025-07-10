@@ -8,25 +8,15 @@ import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import { Typewriter } from "@/components/Typewriter";
 
 const rawText = [
-  { text: "Hi! I'm Azeez, a " },
-  { text: "UI/UX Designer", className: "text-white font-semibold" },
-  {
-    text: " passionate about crafting intuitive and visually compelling digital experiences. I specialize in transforming ideas into user-centered interfaces using tools like ",
-  },
-  { text: "Figma", className: "text-pink-300 font-medium" },
-  { text: ", " },
-  { text: "Adobe XD", className: "text-yellow-300 font-medium" },
-  { text: ", and " },
-  { text: "Webflow", className: "text-teal-300 font-medium" },
-  {
-    text: ". From wireframes to high-fidelity prototypes, I help brands create seamless design systems that elevate usability and engagement. Based in Nigeria, I collaborate with teams to bring designs to life with precision and purpose.",
-  },
+  { text: "I’m Azeez — a " },
+  { text: "UI/UX, Brand & Graphic Designer", className: "text-white font-semibold" },
+  { text: " turning ideas into mind-blowing visual realities." },
 ];
 
 
 export function SparklesPreview() {
   return (
-    <div className="relative w-full min-h-screen bg-[#0000C9] flex flex-col items-center justify-start overflow-hidden rounded-md px-4 sm:px-6 md:px-8 pt-28 md:pt-36">
+    <div className="relative w-100vh min-h-screen bg-[#0000C9] flex flex-col items-center justify-start overflow-hidden rounded-md px-4 sm:px-6 md:px-8 pt-28 md:pt-36">
       {/* Sparkles Background */}
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
@@ -62,7 +52,12 @@ export function SparklesPreview() {
       </div>
 
       <div>
-        <button className="relative group mt-8 px-6 py-3 rounded-full bg-white text-[#0000C9] font-semibold text-base shadow-xl overflow-hidden ring-1 ring-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <button  onClick={() => {
+    const section = document.getElementById("about");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }} className="relative group mt-8 px-6 py-3 rounded-full bg-white text-[#0000C9] font-semibold text-base shadow-xl overflow-hidden ring-1 ring-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
           {/* Hover shine animation */}
           <span className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms] ease-in-out blur-sm opacity-70"></span>
 

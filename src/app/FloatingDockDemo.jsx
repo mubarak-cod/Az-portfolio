@@ -55,11 +55,12 @@ export function FloatingDockDemo() {
   ];
   return (
     <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16">
-      <FloatingDock mobileClassName="translate-y-20" items={links} />
+      <FloatingDock mobileClassName="translate-y-20 space-y-2 px-2 py-4" items={links} />
 
-      <span className="mt-8 text-sm text-center text-neutral-500 dark:text-neutral-400">
-        © 2025 Artistic Axis. All rights reserved.
-      </span>
+     <span className="mt-20 sm:mt-4 text-sm text-center text-neutral-500 dark:text-neutral-400">
+  © 2025 Artistic Axis. All rights reserved.
+</span>
+
     </div>
   );
 }

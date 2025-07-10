@@ -87,9 +87,16 @@ export default function Services() {
           <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 mb-4">
             Not sure what you need?
           </p>
-          <button className="px-6 py-3 bg-[#0000c9] text-white rounded-full hover:bg-[#1a1aff] transition duration-300 shadow-md hover:shadow-lg">
-            Let’s Talk
-          </button>
+          <a
+            href="https://wa.me/2348142545699"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <button className="px-6 py-3 bg-[#0000c9] text-white rounded-full hover:bg-[#1a1aff] transition duration-300 shadow-md hover:shadow-lg">
+              Let’s Talk
+            </button>
+          </a>
         </motion.div>
       </div>
     </section>

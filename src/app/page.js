@@ -10,6 +10,7 @@ import AboutMe from "@/components/AboutMe";
 import Services from "@/components/Services";
 import GreenBiteCaseStudy from "@/components/GreenBiteCaseStudy";
 import BorderMagicButton from "@/components/BorderMagicButton";
+import TestimonialSlider from "@/components/TestimonialSlider"
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
       </section>
 
       <section id="testimonials" className="scroll-mt-28">
-        <InfiniteMovingCardsDemo />
+        <TestimonialSlider />
       </section>
 
       <section id="contact" className="scroll-mt-28">

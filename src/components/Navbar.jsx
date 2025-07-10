@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
 import {
   Home,
   User,
@@ -30,7 +32,19 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-white dark:bg-[#0e0e1a] shadow z-50 px-4 md:px-12 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-[#0000c9]">Artistic Axis</div>
+        <div className="flex items-center gap-2">
+          {/* Replace below span with an actual logo image/icon if needed */}
+          <Image
+            src="/logo.jpg"
+            alt="Artistic Axis Logo"
+            width={32}
+            height={32}
+             className="object-contain rounded-full"
+          />
+          <span className="text-2xl font-bold text-[#0000c9]">
+            Artistic Axis
+          </span>
+        </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8 text-sm font-medium text-gray-800 dark:text-white">

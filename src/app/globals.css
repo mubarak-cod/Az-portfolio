@@ -16,6 +16,17 @@
   }
 }
 
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;    
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
 .blinking-cursor {
   display: inline-block;
   animation: blink 1s step-start infinite;

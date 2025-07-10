@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-// import Azeez from "@/public/azeez.jpg";
 
 export default function AboutMe() {
   return (
     <section className="w-full bg-[#f9f9ff] dark:bg-[#0c0c1d] py-20 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20">
         {/* Bio Section */}
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0000c9] dark:text-white mb-6">
@@ -16,15 +15,15 @@ export default function AboutMe() {
             I’m{" "}
             <span className="font-semibold text-[#0000c9] dark:text-white">
               Azeez Folaranmi
-            </span>{" "}
-            — a multi-passionate Nigerian UI/UX, Brand & Graphic Designer
-            blending logic and emotion to solve real-world problems with sleek
-            visuals. With 3+ years of experience, I help brands become
-            unforgettable.
+            </span>
+            — a multi-skilled Nigerian designer with a passion for transforming ideas into visually striking realities. With over 3 years of experience spanning{" "}
+            <strong className="text-[#0000c9] dark:text-white">
+              UI/UX design, graphic design, and brand identity
+            </strong>
+            , I blend logic and creativity to help brands become unforgettable.
             <br />
             <br />
-            From mobile apps to full visual identities, I create designs that
-            hit different and leave a mark.
+            From mobile apps to full-scale brand visuals, I create experiences that not only look great — but feel right and function smoothly.
           </p>
 
           {/* Fun Facts - Designer Cards */}
@@ -32,8 +31,8 @@ export default function AboutMe() {
             {[
               {
                 icon: "💼",
-                title: "3+ Years Crafting UX",
-                desc: "Creating intuitive, user-first experiences that drive results.",
+                title: "3+ Years of Design Experience",
+                desc: "Across UI/UX, brand identity, and visual storytelling.",
               },
               {
                 icon: "🚀",
@@ -43,17 +42,17 @@ export default function AboutMe() {
               {
                 icon: "🌍",
                 title: "Clients Worldwide",
-                desc: "Collaborated remotely with teams in 5+ countries and cultures.",
+                desc: "Collaborated with teams across 5+ countries and cultures.",
               },
               {
                 icon: "🧠",
-                title: "Design Thinking",
-                desc: "Blending empathy, strategy, and visual finesse in every solution.",
+                title: "Design Thinking Approach",
+                desc: "Empathy + strategy + creativity in every solution.",
               },
               {
                 icon: "🎯",
-                title: "Purpose-Driven Mission",
-                desc: "To solve real problems through thoughtful design and storytelling.",
+                title: "Purpose-Driven",
+                desc: "Designs that solve real problems and tell impactful stories.",
               },
             ].map((fact, idx) => (
               <div
@@ -74,9 +73,7 @@ export default function AboutMe() {
 
         {/* Image with Spinning Border */}
         <div className="flex-shrink-0 relative w-[250px] h-[250px] rounded-full overflow-hidden">
-          {/* Animated border */}
           <div className="absolute inset-0 rounded-full border-4 border-[#0000c9] animate-spin-slow" />
-          {/* Static image inside */}
           <Image
             src="/images/azeez.jpg"
             alt="Azeez"
