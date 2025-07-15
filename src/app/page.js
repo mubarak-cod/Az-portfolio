@@ -10,7 +10,8 @@ import AboutMe from "@/components/AboutMe";
 import Services from "@/components/Services";
 import GreenBiteCaseStudy from "@/components/GreenBiteCaseStudy";
 import BorderMagicButton from "@/components/BorderMagicButton";
-import TestimonialSlider from "@/components/TestimonialSlider"
+import TestimonialSlider from "@/components/TestimonialSlider";
+import GreenBiteCaseStud from "@/components/GreenBiteCaseStud";
 
 export default function Home() {
   return (
@@ -30,6 +31,10 @@ export default function Home() {
 
       <section id="case-studies" className="scroll-mt-28">
         <GreenBiteCaseStudy />
+      </section>
+
+      <section id="case-studies" className="scroll-mt-28">
+        <GreenBiteCaseStud />
       </section>
 
       <section id="services" className="scroll-mt-28">
