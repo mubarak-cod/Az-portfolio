@@ -28,7 +28,7 @@ const BorderMagicButton = () => {
        href="mailto:artisticaxis2024@gmail.com?subject=Let's%20Work%20Together&body=Hi%20Azeez%2C%20I%27m%20interested%20in%20working%20with%20you..."
         className="relative inline-flex h-11 w-52 sm:w-60 overflow-hidden rounded-md p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
       >
-        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] mb-6" />
         <span className="inline-flex h-full w-full items-center justify-center gap-2 rounded-md bg-slate-950 px-4 text-sm font-medium text-white backdrop-blur-3xl">
           <Send className="h-4 w-4" />
           Get in touch

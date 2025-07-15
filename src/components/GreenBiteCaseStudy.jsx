@@ -10,113 +10,88 @@ export default function GreenBiteCaseStudy() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#0000c9] dark:text-white mb-12">
           Case Study: Green Bite – Food Delivery App UI/UX
         </h2>
+      </div>
 
-        {/* Problem & Goal */}
-        <div className="grid md:grid-cols-2 gap-10 mb-12">
-          <div>
-            <h3 className="text-xl font-semibold mb-2">🧩 The Problem</h3>
-            <p className="text-gray-700 dark:text-gray-300">
-              Most food delivery apps used by the target audience were clunky, slow, and filled with too many steps.
-              Users often abandoned the cart or got frustrated before completing orders. There was also lack of visual trust,
-              users couldn’t tell if a vendor was legit.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">🎯 The Goal</h3>
-            <p className="text-gray-700 dark:text-gray-300">
-              Design a mobile-first food delivery app that’s clean, fast, visually appealing, and easy to navigate,
-              with a trustworthy feel that encourages quick decision-making and reorders.
-            </p>
-          </div>
-        </div>
+              <main className="bg-black text-white min-h-screen py-10 px-4 md:px-20 font-sans">
+                  <section className="max-w-4xl mx-auto space-y-10">
+                      <div className="border border-gray-700 rounded-lg p-6">
+                          <h2 className="text-3xl font-bold text-green-400 mb-4">Introduction</h2>
+                          <p className="text-gray-300">
+                              Green Bite is a modern food delivery app built for users who want convenience,
+                              simplicity, and fast food ordering in one smooth experience. This project allowed
+                              me to explore user-centered UI design while crafting a visually appealing and
+                              functional app for mobile platforms.
+                          </p>
+                      </div>
+      
+                      <div className="border border-gray-700 rounded-lg p-6">
+                          <h2 className="text-3xl font-bold text-green-400 mb-4">The Problem</h2>
+                          <p className="text-gray-300">
+                              Many food delivery apps are either cluttered or outdated. Users struggle to find
+                              meals quickly, and checkout flows can feel long or confusing. I designed Green Bite
+                              to fix that — with a clean interface, minimal steps, and real-time order tracking.
+                          </p>
+                      </div>
+      
+                      <div className="border border-gray-700 rounded-lg p-6">
+                          <h2 className="text-3xl font-bold text-green-400 mb-4">The Solution</h2>
+                          <p className="text-gray-300">
+                              Green Bite solves these issues with intuitive navigation, stunning food visuals,
+                              and a frictionless checkout process.
+                          </p>
+                      </div>
+      
+                      <div className="border border-gray-700 rounded-lg p-6">
+                          <h2 className="text-3xl font-bold text-green-400 mb-4">Mission</h2>
+                          <p className="text-gray-300">
+                              To deliver a fast, modern, and user-friendly food ordering app that’s easy to use
+                              and visually satisfying.
+                          </p>
+                      </div>
+      
+<div className="mt-10">
+  <h2 className="text-2xl font-semibold text-green-400 mb-4">Design Screens</h2>
 
-        {/* Role & Tools */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-blue-50 dark:bg-[#1b1b2f] p-6 rounded-lg">
-            <h4 className="font-medium text-lg mb-2">💼 My Role</h4>
-            <ul className="list-disc text-gray-700 dark:text-gray-300 pl-5 space-y-1 text-sm">
-              <li>UX Research</li>
-              <li>UI Design</li>
-              <li>Visual Direction</li>
-              <li>Prototyping</li>
-            </ul>
-          </div>
-
-          <div className="bg-blue-50 dark:bg-[#1b1b2f] p-6 rounded-lg">
-            <h4 className="font-medium text-lg mb-2">🛠 Tools Used</h4>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">Figma</p>
-          </div>
-        </div>
-
-        {/* Process */}
-        <div className="mb-12">
-          <h3 className="text-xl font-semibold mb-4">🔄 The Process</h3>
-          <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
-            <div>
-              <p className="font-medium">1. Research & Competitive Audit</p>
-              <p>
-                Studied top-performing food apps (like Jumia Food, Glovo, etc.) and analyzed user complaints & reviews.
-              </p>
-            </div>
-            <div>
-              <p className="font-medium">2. User Flow Mapping</p>
-              <p>Simplified the ordering process into 3 primary actions: Search → Select → Checkout</p>
-            </div>
-            <div>
-              <p className="font-medium">3. Wireframing</p>
-              <p>Sketched and tested wireframes to remove distractions and reduce decision fatigue.</p>
-            </div>
-            <div>
-              <p className="font-medium">4. UI Design</p>
-              <p>
-                Used a modern, fresh color palette and big, readable fonts. Designed strong CTAs, clean layout,
-                and trust indicators (vendor ratings, delivery times, etc.).
-              </p>
-            </div>
-            <div>
-              <p className="font-medium">5. Prototype & Feedback</p>
-              <p>
-                Created an interactive prototype and tested with 4 users. All gave positive feedback on how easy
-                and smooth the app felt.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Result */}
-        <div className="bg-green-100 dark:bg-[#102e1a] border-l-4 border-green-500 p-6 rounded-lg mb-12">
-          <h4 className="text-lg font-semibold text-green-800 dark:text-green-300 mb-2">✅ The Result</h4>
-          <p className="text-sm text-gray-800 dark:text-gray-100">
-            The final UI was clean, intuitive, and mobile-optimized. Users said it made ordering food feel
-            “effortless and fast.” It’s now a model for other food delivery concepts I pitch.
-          </p>
-        </div>
-
-        {/* Visuals */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+    {[
+      "/images/Frame 1.png",
+      "/images/Frame 2.png",
+      "/images/Frame 3 (1).png",
+      "/images/Frame 4.png",
+      "/images/Frame 5.png",
+      "/images/Frame 6.png",
+      "/images/Frame 7 (2).png",
+      "/images/Frame 8.png",
+      "/images/Frame 9.png",
+      "/images/Frame 10.png",
+      "/images/cargo.png",
+      "/images/mock.png",
+    ].map((src, index) => (
+      <div
+        key={index}
+        className="bg-gray-900 p-2 rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+      >
+        <div className="w-full h-auto rounded-lg overflow-hidden">
           <Image
-            src="/images/green-bite-home.png"
-            alt="Home screen"
+            src={src}
+            alt={`Design ${index + 1}`}
             width={600}
-            height={800}
-            className="rounded-xl shadow"
-          />
-          <Image
-            src="/images/green-bite-cart.png"
-            alt="Cart"
-            width={600}
-            height={800}
-            className="rounded-xl shadow"
-          />
-          <Image
-            src="/images/green-bite-tracking.png"
-            alt="Tracking"
-            width={600}
-            height={800}
-            className="rounded-xl shadow"
+            height={400}
+            className="rounded-lg w-full h-auto object-contain"
           />
         </div>
       </div>
+    ))}
+  </div>
+</div>
+
+                  </section>
+              </main>
     </section>
   );
 }
+
+
+
+
+
