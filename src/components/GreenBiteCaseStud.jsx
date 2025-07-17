@@ -40,37 +40,37 @@ export default function GreenBiteCaseStud() {
                 </div>
 
                 <div className="mt-10">
-                    <h2 className="text-2xl font-semibold text-green-400 mb-4">Design Screens</h2>
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
-  {[
-    "/images/Frame 1.png",
-    "/images/Frame 2.png",
-    "/images/Frame 3 (1).png",
-    "/images/Frame 4.png",
-    "/images/Frame 5.png",
-    "/images/Frame 6.png",
-    "/images/Frame 7 (2).png",
-    "/images/Frame 8.png",
-    "/images/Frame 9.png",
-    "/images/Frame 10.png",
-    "/images/cargo.png",
-    "/images/mock.png"
-  ].map((src, index) => (
-    <div
-      key={index}
-      className="bg-gray-900 p-2 rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-    >
-      <div className="relative w-full pt-[133%] overflow-hidden rounded-lg">
-        <Image
-          src={src}
-          alt={`Cart ${index + 1}`}
-          fill
-          className="object-cover"
-        />
-      </div>
-    </div>
-  ))}
-</div>
+                    {/* <h2 className="text-2xl font-semibold text-green-400 mb-4">Design Screens</h2> */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+                        {[
+                            "/images/cargo.png",
+                            "/images/Frame 1.png",
+                            "/images/Frame 2.png",
+                            "/images/Frame 3 (1).png",
+                            "/images/Frame 4.png",
+                            "/images/Frame 5.png",
+                            "/images/Frame 6.png",
+                            "/images/Frame 7 (2).png",
+                            "/images/Frame 8.png",
+                            "/images/Frame 9.png",
+                            "/images/Frame 10.png",
+                            "/images/mock.png"
+                        ].map((src, index) => (
+                            <div
+                                key={index}
+                                className="bg-gray-900 p-2 rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                            >
+                                <div className="relative w-full pt-[133%] overflow-hidden rounded-lg">
+                                    <Image
+                                        src={src}
+                                        alt={`Cart ${index + 1}`}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
 
 

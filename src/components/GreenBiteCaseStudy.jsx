@@ -50,22 +50,23 @@ export default function GreenBiteCaseStudy() {
                       </div>
       
 <div className="mt-10">
-  <h2 className="text-2xl font-semibold text-green-400 mb-4">Design Screens</h2>
+  {/* <h2 className="text-2xl font-semibold text-green-400 mb-4">Design Screens</h2> */}
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
     {[
-      "/images/Frame 1.png",
+      // "/images/Frame 1.png",
       "/images/Frame 2.png",
+      "/images/cargo.png",
       "/images/Frame 3 (1).png",
       "/images/Frame 4.png",
       "/images/Frame 5.png",
+      "/images/mock.png",
       "/images/Frame 6.png",
       "/images/Frame 7 (2).png",
       "/images/Frame 8.png",
       "/images/Frame 9.png",
       "/images/Frame 10.png",
-      "/images/cargo.png",
-      "/images/mock.png",
+      
     ].map((src, index) => (
       <div
         key={index}

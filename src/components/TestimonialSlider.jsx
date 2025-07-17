@@ -32,27 +32,26 @@ const testimonials = [
 export default function TestimonialSlider() {
   const scrollRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const checkIsMobile = () => {
+    const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    checkIsMobile(); // Run once
-    window.addEventListener("resize", checkIsMobile); // Update on resize
-
-    return () => window.removeEventListener("resize", checkIsMobile);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
-    if (isMobile) return; // ❌ Stop auto-scroll on mobile
+    if (isMobile) return;
 
     const el = scrollRef.current;
     if (!el) return;
 
     const scroll = () => {
       el.scrollLeft += 1;
-
       if (el.scrollLeft + el.clientWidth >= el.scrollWidth) {
         el.scrollTo({ left: 0, behavior: "smooth" });
       }
@@ -61,6 +60,28 @@ export default function TestimonialSlider() {
     const interval = setInterval(scroll, 20);
     return () => clearInterval(interval);
   }, [isMobile]);
+
+  // Track active testimonial on scroll
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const handleScroll = () => {
+      const childWidth = el.children[0]?.children[0]?.offsetWidth || 1;
+      const index = Math.round(el.scrollLeft / (childWidth + 24)); // 24 = gap-6
+      setActiveIndex(index);
+    };
+
+    el.addEventListener("scroll", handleScroll);
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Manual scroll to a testimonial
+  const scrollToIndex = (i) => {
+    const el = scrollRef.current;
+    const childWidth = el.children[0]?.children[0]?.offsetWidth || 1;
+    el.scrollTo({ left: i * (childWidth + 24), behavior: "smooth" });
+  };
 
   return (
     <section className="w-full py-16 px-4 bg-[#f9f9ff] dark:bg-[#0c0c1d]">
@@ -71,10 +92,7 @@ export default function TestimonialSlider() {
         </span>
       </h1>
 
-      <div
-        className="overflow-x-auto no-scrollbar scroll-smooth"
-        ref={scrollRef}
-      >
+      <div className="overflow-x-auto no-scrollbar scroll-smooth" ref={scrollRef}>
         <div className="flex gap-6 px-2 md:px-8 w-max">
           {testimonials.map((t, idx) => (
             <div
@@ -90,6 +108,21 @@ export default function TestimonialSlider() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Pagination Dots */}
+      <div className="flex justify-center items-center mt-6 gap-2 overflow-x-auto px-4">
+        {testimonials.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => scrollToIndex(i)}
+            className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
+              i === activeIndex
+                ? "bg-[#38bdf8] scale-125"
+                : "bg-gray-400 dark:bg-gray-600"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );

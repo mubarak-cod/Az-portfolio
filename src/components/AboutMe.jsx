@@ -16,7 +16,7 @@ export default function AboutMe() {
             <span className="font-semibold text-[#0000c9] dark:text-white">
               Azeez Folaranmi
             </span>
-            — a multi-skilled Nigerian designer with a passion for transforming ideas into visually striking realities. With over 3 years of experience spanning{" "}
+            , a multi-skilled Nigerian designer with a passion for transforming ideas into visually striking realities. With over 3 years of experience spanning{" "}
             <strong className="text-[#0000c9] dark:text-white">
               UI/UX design, graphic design, and brand identity
             </strong>

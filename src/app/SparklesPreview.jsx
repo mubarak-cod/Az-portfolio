@@ -4,15 +4,16 @@ import React, { useEffect, useState } from "react";
 import { SparklesCore } from "../components/ui/sparkles";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import { Typewriter } from "@/components/Typewriter";
 
 const rawText = [
-  { text: "I’m Azeez, a"  },
-  { text: "UI/UX, Brand & Graphic Designer", className: "text-white font-semibold" },
+  { text: "I’m Azeez, a" },
+  {
+    text: "UI/UX, Brand & Graphic Designer",
+    className: "text-white font-semibold",
+  },
   { text: " turning ideas into mind-blowing visual realities." },
 ];
-
 
 export function SparklesPreview() {
   return (
@@ -30,19 +31,22 @@ export function SparklesPreview() {
         />
       </div>
 
+      {/* Typewriter Text */}
       <div>
-
-      {/* <h1 className="text-white text-2xl md:text-5xl font-bold text-center"> */}
         <Typewriter />
-      {/* </h1> */}
       </div>
 
+      {/* Lottie Animation */}
       <div className="relative z-20 mt-2">
         <DotLottieReact
           src="https://lottie.host/11427381-636e-4aba-9442-8cbdd0b58a34/NC5b883QRf.lottie"
           loop
           autoplay
-           style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+          }}
         />
       </div>
 
@@ -51,23 +55,25 @@ export function SparklesPreview() {
         <TextGenerateEffect words={rawText} />
       </div>
 
-      <div>
-        <button  onClick={() => {
-    const section = document.getElementById("about");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  }} className="relative group mt-8 px-6 py-3 rounded-full bg-white text-[#0000C9] font-semibold text-base shadow-xl overflow-hidden ring-1 ring-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-          {/* Hover shine animation */}
-          <span className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms] ease-in-out blur-sm opacity-70"></span>
-
-          {/* Text and Arrow */}
+      {/* Buttons */}
+      <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 z-30">
+        {/* Gradient Button */}
+        <button
+          onClick={() => {
+            const section = document.getElementById("about");
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+          className="relative group px-6 py-3 rounded-full bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-white font-semibold text-base shadow-xl overflow-hidden transition-all duration-300 hover:scale-105"
+        >
+          <span className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms] ease-in-out blur-sm opacity-80"></span>
           <div className="relative z-10 flex items-center gap-2">
             <span>Let’s Get Started</span>
             <svg
               className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
               fill="none"
-              stroke="#0000C9"
+              stroke="white"
               strokeWidth="1.5"
               viewBox="0 0 24 24"
             >
@@ -79,11 +85,31 @@ export function SparklesPreview() {
             </svg>
           </div>
         </button>
+
+        {/* Download CV Button */}
+       <a
+  href="/azeez.pdf"
+  download
+  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#0000C9] font-semibold text-base shadow-xl transition-all duration-300 hover:scale-105 hover:bg-gray-100"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-5 h-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v6m0 0l-3-3m3 3l3-3m0-6h-6a2 2 0 00-2 2v2"
+    />
+  </svg>
+  <span>Download my CV</span>
+</a>
+
       </div>
     </div>
   );
 }
-
-
-
-
